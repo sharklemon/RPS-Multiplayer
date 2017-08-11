@@ -1,0 +1,55 @@
+pseudo code
+
+p1 enters name, presses submit
+	save player name internally & on server
+	change the p1 name
+	change p1 results panel
+	welcome player to game
+p2 enters name --> 
+	hide the form for input name
+	save player name internally & on server
+	change p2 name heading
+	change p2 results panel
+	welcome and say player number
+	announce p1 its their turn
+	give p1 OPTIONS in options PAN
+	tell P2 waiting for p1
+p1 makes selection
+	save selection internally & to server
+	display to p1 selected in choice panel
+	display choices to p2 in options panel	
+p2 makes selection
+	save selection internally & to server
+	display p1 selected to p2
+	display p2 selected to both
+	determine winner
+	change center panel
+	update scores internally & to server
+	update score panel p1
+	update score panel p2
+	timeout reset to after p2 enters name
+
+if connection lost player is "logged out"
+	go back to after 1p enters name
+
+
+
+var booksRef = ref.child("books");
+booksRef.child('Adam Freeman').set({
+    title: "Pro AngularJS"
+}, onComplete);
+ 
+booksRef.child('Niall OHiggins').set({
+    title: "MongoDB and Python"
+}, onComplete);
+
+
+    "books" : {
+            "Adam Freeman" : {
+             "title" : "Pro AngularJS"
+            },
+            "Niall OHiggins" : {
+              "title" : "MongoDB and Python"
+        }
+    }
+}
